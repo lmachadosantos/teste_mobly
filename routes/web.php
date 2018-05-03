@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('/search/{id}', 'HomeController@index');
+
+Route::get('/request/', 'RequestController@index');
+
+Route::get('/request/add', 'RequestController@add');
+
+Route::get('/request/update-item', 'RequestController@updateItem');
+
+Route::get('/request/delete-item', 'RequestController@deleteItem');
+
+Route::get('/request/close', 'RequestController@close');
+
+Route::get('/request/finish', 'RequestController@finish');
+
+Route::get('/product/{id}', 'ProductController@index');
